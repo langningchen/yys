@@ -28,6 +28,7 @@ def initialize_browser():
     options = ChromeOptions()
     options.add_argument("--headless")
     options.add_argument("--window-size=1920,1080")
+    options.add_argument("--user-data-dir=/var/tmp/yys")
     return webdriver.Chrome(options=options)
 
 
