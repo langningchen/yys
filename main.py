@@ -26,9 +26,9 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 def initialize_browser():
     print("Initializing browser...")
     options = ChromeOptions()
-    options.add_argument("--headless")
+    options.add_argument("--headless=new")
     options.add_argument("--window-size=1920,1080")
-    options.add_argument("--user-data-dir=/var/tmp/yys")
+    options.add_argument("--no-sandbox")
     return webdriver.Chrome(options=options)
 
 
