@@ -16,7 +16,18 @@ This project automates the daily login reward collection for the YYS game using 
 
 ## Usage
 
-### Using GitHub Actions (RECOMMENDED)
+#### Getting Your YYS Token
+
+1. Open the [YYS game website](https://ys.mihoyo.com/cloud/) in your browser and log in to your account.
+2. Open the browser's developer tools (usually F12 or right-click and select "Inspect").
+3. Go to the "Application" tab and look for the "Cookies" section in the left sidebar.
+4. Find the cookie named `uni_web_token` and copy the value of it. The value should look like `0123456789abcdefghijklmnopqrstuvwxyz012345_mhy`
+5. Make sure the token ends with `_mhy`. This is required for the script to work correctly.
+6. Store this token securely, as it will be used to authenticate your daily login.
+
+#### Running the Script
+
+##### Using GitHub Actions (RECOMMENDED)
 
 This project includes a GitHub Actions workflow to automate the script daily.
 
@@ -24,7 +35,7 @@ This project includes a GitHub Actions workflow to automate the script daily.
 2. Add your YYS token as a secret in your repository settings with the name `YYS_TOKEN`.
 3. The workflow will run daily at midnight.
 
-### Running Locally
+##### Running Locally
 
 <details>
 
