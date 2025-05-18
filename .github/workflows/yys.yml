@@ -19,7 +19,7 @@ jobs:
       - uses: browser-actions/setup-chrome@v1
         with:
           install-chromedriver: true
-      - run: python /home/langningchen/yys/main.py ${{ secrets.YYS_TOKEN }}
+      - run: python main.py ${{ secrets.YYS_TOKEN }}
       - uses: actions/upload-artifact@v4
         with:
           name: daily-screenshot
