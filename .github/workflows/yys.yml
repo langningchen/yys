@@ -16,6 +16,8 @@ jobs:
           python-version: "3.12"
           cache: 'pip'
       - run: pip install -r requirements.txt
+      - name: Remove existing chrome
+        run: sudo apt-get remove -y google-chrome-stable
       - uses: browser-actions/setup-chrome@v1
         with:
           install-chromedriver: true
